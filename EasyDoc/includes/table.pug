@@ -1,0 +1,21 @@
+-var table = [{title: 'Кто?', time: '15:00 - 15:15', description: 'Внедряем СЭД. Кто за него в ответе?', opacity: "rgba(0, 0, 0, 20%)"}, {title: 'Для кого?', time: '15:15 - 15:30', description: 'Как привлечь конечных пользователей к участию в проекте и выжить', opacity: "rgba(0, 0, 0, 20%)"}, {title: 'Обучение', time: '15:30 - 15:45', description: 'Ученье – свет внедрения. Обучаем пользователей', opacity: "rgba(0, 0, 0, 20%)"}, {title: 'Аудит', time: '15:45 - 16:00', description: 'Аудит – всему голова. Анализируем документы', opacity: "rgba(0, 0, 0, 20%)"}, {title: 'Подрядчик', time: '15:45 - 16:00', description: 'Широкими должны быть взгляды. Как выбрать узкоспециализированного подрядчика.', opacity: "rgba(0, 0, 0, 0%)"}]
+
+table
+    tr
+        td(height="20")
+    tr
+        td(width="30")
+        td
+            table
+                each row in table
+                    tr(height="10")
+                    tr
+                        td(width="180" height="120" align="center" style={"background-image": "url('https://korablik.studio/images/letters/easydoc/bg-cloud.png')", "background-size": "contain", "background-repeat": "no-repeat", "background-position": "center"})
+                            font(color="#545456" style={"font-size": "16px", "font-weight": "bold"})=row.title
+                        td(width="160" align="center")
+                            font(color="#764BFE" style={"font-size": "20px", "font-weight": "bold"})=row.time
+                        td(width="270")
+                            font(color="#545456" style={"font-size": "15px"})=row.description
+                    tr(style={"border-bottom": "1px solid", "border-bottom-color": row.opacity, "padding-bottom": "10px"})
+                        td(height="5" colspan="3")
+        td(width="30")
